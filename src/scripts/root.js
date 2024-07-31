@@ -1,7 +1,6 @@
 const file = [
     "./src/scripts/header.js",
     "./src/scripts/main.js",
-    "./src/scripts/pages.js",
     "./src/scripts/footer.js"
 ]
 

@@ -1,4 +1,6 @@
 {
+    "phone":"./src/assets/phone.svg",
+    "location":"./src/assets/location.svg",
     "header": {
         "logo": "./src/assets/logo.svg",
         "menu": [

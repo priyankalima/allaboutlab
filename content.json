@@ -1,0 +1,200 @@
+{
+    "header": {
+        "logo": "./src/assets/logo.svg",
+        "menu": [
+            "HOME",
+            "SERVICES",
+            "PACKAGES",
+            "BOOK A TEST",
+            "DOWNLOAD REPORT",
+            "ABOUT US",
+            "NEAR CENTER"
+        ]
+    },
+    "main": {
+        "banner": [
+            {
+                "img": "./src/assets/banner-images/img-1.svg",
+                "rspnImg": "./src/assets/banner-images/img-3.svg",
+                "title": "Working Everyday Towards Healthcare"
+            },
+            {
+                "img": "./src/assets/banner-images/img-2.svg",
+                "rspnImg": "./src/assets/banner-images/img-4.svg",
+                "title": "Authentic & Reliable"
+            }
+        ],
+        "packages": [
+            {
+                "img": "./src/assets/packages-images/img-1.svg",
+                "title": "Essential Healthcare Package",
+                "price": "999"
+            },
+            {
+                "img": "./src/assets/packages-images/img-2.svg",
+                "title": "Advance Healthcare Package",
+                "price": "749"
+            },
+            {
+                "img": "./src/assets/packages-images/img-3.svg",
+                "title": "Exclusive  Healthcare Above 40 age Men",
+                "price": "999"
+            }
+        ],
+        "healthRisk": [
+            {
+                "img": "./src/assets/healthText-images/img-1.svg",
+                "title": "Lungs"
+            },
+            {
+                "img": "./src/assets/healthText-images/img-2.svg",
+                "title": "Liver"
+            },
+            {
+                "img": "./src/assets/healthText-images/img-3.svg",
+                "title": "Allergy"
+            },
+            {
+                "img": "./src/assets/healthText-images/img-4.svg",
+                "title": "Kidney"
+            },
+            {
+                "img": "./src/assets/healthText-images/img-5.svg",
+                "title": "Heart"
+            }
+        ],
+        "teamDetail": {
+            "title": "",
+            "para": "We understand the importance of accurate and timely diagnostic results. That’s why we are dedicated to provide the highest level of service and expertise to our patients and healthcare providers.Here are a few reasons why you should choose us for your pathology needs:",
+            "list": [
+                {
+                    "icon": "./src/assets/info-icons/icon-1.svg",
+                    "name": "highly trained pathologists and laboratory professionals"
+                },
+                {
+                    "icon": "./src/assets/info-icons/icon-2.svg",
+                    "name": "accredited by the (NABL)"
+                },
+                {
+                    "icon": "./src/assets/info-icons/icon-3.svg",
+                    "name": "high-quality pathology services at an affordable price"
+                },
+                {
+                    "icon": "./src/assets/info-icons/icon-4.svg",
+                    "name": "Proficiency Testing for Accurate Reports"
+                }
+            ],
+            "team": [
+                {
+                    "img": "./src/assets/team-images/img-1.svg",
+                    "name": "Dr. Puneet Kaur",
+                    "proffesion": "Consultant Pathologist"
+                },
+                {
+                    "img": "./src/assets/team-images/img-2.svg",
+                    "name": "Dr. Harshita",
+                    "proffesion": "Laboratory Director & Consultant Microbiologist"
+                }
+            ]
+        },
+        "testimonial": [
+            {
+                "img": "./src/assets/testimonial-profiles/img-1.svg",
+                "name": "Chris Bessel",
+                "msg": "Very Good staff,excellent execution of sample,timely results even before promised time",
+                "proffesion": "Professor"
+            },
+            {
+                "img": "./src/assets/testimonial-profiles/img-2.svg",
+                "name": "Jeya Sanmukh",
+                "msg": "Very Good staff,excellent execution of sample,timely results even before promised time",
+                "proffesion": "Agri Specialist"
+            },
+            {
+                "img": "./src/assets/testimonial-profiles/img-3.svg",
+                "name": "Merin Rale",
+                "msg": "Happy With healthcare service,excellent execution of sample,timely results even before promised time",
+                "proffesion": "Professor"
+            }
+        ],
+        "counts": [
+            {
+                "count": "4+",
+                "text":"Years of Impeccable Services & Effective Operations"
+            },
+            {
+                "count": "200+",
+                "text":"Locations"
+            },
+            {
+                "count": "150000+",
+                "text":"Satisfied Patients"
+            },
+            {
+                "count": "2000+",
+                "text":"Tests and Profile"
+            }
+        ],
+        "blog":[
+            {
+                "img":"./src/assets/blog-images/img-1.svg",
+                "date":"June 14,2023",
+                "title":"Thyroid Disease : Understanding Symptoms..."
+            },
+            {
+                "img":"./src/assets/blog-images/img-2.svg",
+                "date":"June 14,2023",
+                "title":"Understanding Ankylosing Spondylolysis..."
+            },
+            {
+                "img":"./src/assets/blog-images/img-3.svg",
+                "date":"June 14,2023",
+                "title":"Diarrhia : Understanding Symptoms..."
+            },
+            {
+                "img":"./src/assets/blog-images/img-4.svg",
+                "date":"June 14,2023",
+                "title":"Astama : Understanding Symptoms..."
+            }
+        ],
+        "faq":[
+            {
+                "title":"Can i See My Tests Result Online?",
+                "content":"The test results are available on the website. It can be seen or visited at any point of time."
+            },
+            {
+                "title":"Who Can I contact If I have Questions About my Test result",
+                "content":"The test results are available on the website. It can be seen or visited at any point of time."
+            },
+            {
+                "title":"Is it safe to use a pathology website?",
+                "content":"The test results are available on the website. It can be seen or visited at any point of time."
+            },
+            {
+                "title":"Is it safe to use a pathology website?",
+                "content":"The test results are available on the website. It can be seen or visited at any point of time."
+            }
+        ],
+        "contact":{
+            "text":"If you have queries or require any information kindly Contact We would be happy to be of assistance to you.",
+            "phone":"./src/assets/contact-icons/icon-1.svg",
+            "email":"./src/assets/contact-icons/icon-2.svg",
+            "location":"./src/assets/contact-icons/icon-3.svg"
+        },
+        "brands":[
+            "./src/assets/brand-images/img-1.svg",
+            "./src/assets/brand-images/img-2.svg",
+            "./src/assets/brand-images/img-3.svg",
+            "./src/assets/brand-images/img-4.svg",
+            "./src/assets/brand-images/img-5.svg"
+        ]
+    },
+    "footer":{
+        "about":"We aspire to provide personalised patient care. Above all, our primary commitment is towards “the well- being of each and every one” utilising our services.",
+        "quicklink":[
+            "FAQ","Blogs","About","Services","Book A Test","Download Reports"
+        ],
+        "text":"Presenting the new All About Lab App",
+        "para":"The App features different options that let you book home visits, search for a specific test, locate nearest labs,access smart reports and much more."
+    }
+}

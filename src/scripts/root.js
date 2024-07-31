@@ -10,6 +10,3 @@ file.forEach(item=>{
     script.src = item;
     document.body.appendChild(script);
 })
-
-if (document.location.hash == "" || document.location.hash == "#")
-document.location.hash = "#updates-list";

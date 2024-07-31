@@ -1,13 +1,10 @@
 header.appendChild(
+    // navbar
     Object.assign(
         document.createElement('nav'),
         {
-            className:'navbar',
             innerHTML :`
-            <a href="#updates-list" >Home</a>
-             <a href="#sectionOne" >About</a>
-             <a href="#sectionTwo">Contact</a>
-             <a href="#sectionThree">Blog</a>
+            <div class="container"></div>
             `,
             function:addEventListener('load',()=>{
                 

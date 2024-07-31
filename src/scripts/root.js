@@ -10,3 +10,7 @@ file.forEach(item=>{
     script.src = item;
     document.body.appendChild(script);
 })
+
+function toggle(x){
+    x.classList.toggle("change");
+}

@@ -18,12 +18,14 @@
             {
                 "img": "./src/assets/banner-images/img-1.svg",
                 "rspnImg": "./src/assets/banner-images/img-3.svg",
-                "title": "Working Everyday Towards Healthcare"
+                "title": "Working Everyday Towards Healthcare",
+                "custome":"All About Lab"
             },
             {
                 "img": "./src/assets/banner-images/img-2.svg",
                 "rspnImg": "./src/assets/banner-images/img-4.svg",
-                "title": "Authentic & Reliable"
+                "title": "Authentic & Reliable",
+                "custome":"Advanced,"
             }
         ],
         "packages": [

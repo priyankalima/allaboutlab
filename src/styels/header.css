@@ -48,6 +48,7 @@ nav {
             width: 0;
             height:100vh;
             align-items: start !important;
+            z-index:1;
             /* padding:20px; */
         }
 

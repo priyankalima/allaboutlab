@@ -1,0 +1,8 @@
+#main{
+    width:100%;
+    height:auto;
+    section:nth-child(1){
+        background:green;
+        height:100vh;
+    }
+}

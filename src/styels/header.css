@@ -43,10 +43,10 @@ nav {
             position: absolute;
             background: var(--secondary);
             left: 0;
-            top: 5pc;
+            top: 5.5pc;
             overflow: hidden;
             width: 0;
-            height:90vh;
+            height:100vh;
             align-items: start !important;
             /* padding:20px; */
         }

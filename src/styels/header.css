@@ -10,62 +10,37 @@ nav {
         align-content: center;
         /* background: green; */
 
-        @media(max-width:600px) {
-            flex-direction: column;
-            align-items: self-start;
+    }
+    input{
+        display:none;
+    }
+    label{
+        cursor: pointer;
+        display: none;
+        @media(max-width:600px){
+            display: block;
         }
     }
-
-    .logo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @media(max-width:600px) {
-            width: 100%;
-        }
-
-        .toggle-btn {
-            cursor: pointer;
-            display: none;
-
-            @media(max-width:600px) {
-                display: block;
-            }
-
-            .bar1,
-            .bar2,
-            .bar3 {
-                width: 25px;
-                height: 2px;
-                background-color: #333;
-                margin: 6px 0;
-                transition: 0.4s;
-
-            }
-        }
-
-        .change .bar1 {
-            transform: translate(0, 5px) rotate(-45deg);
-        }
-
-        .change .bar2 {
-            opacity: 0;
-        }
-
-        .change .bar3 {
-            transform: translate(0, -11px) rotate(45deg);
-        }
+    input[type="checkbox"]:checked + label + .menu{
+        width:100%;
+        padding:20px;
     }
-
     .menu {
         display: flex;
         gap:20px;
         flex-direction: column;
         align-items: end !important;
+        transition: 0.5s;
 
         @media(max-width:600px) {
-            display:none;
+            position: absolute;
+            background:var(--secondary);
+            left:0;
+            top:5pc;
+            overflow: hidden;
+            width:0;
+            align-items:start !important;
+            /* padding:20px; */
         }
 
         .menu-list {
@@ -81,6 +56,9 @@ nav {
             display:flex;
             gap:10px;
             justify-content: end;
+            @media(max-width:600px){
+                justify-content: start;
+            }
 
             button{
                 padding:10px;
@@ -106,51 +84,5 @@ nav {
             /* margin-right: 10px; */
         }
     }
-    .rspn-menu{
-        display:none;
-        background:#8ec15b;
-        position: absolute;
-        @media(max-width:600px) {
-            width:90%;
-            height:100vh;
-            padding:10px 20px;
-            /* display:none; */
-        }
-
-        .menu-list {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-
-            @media(max-width:600px) {
-                flex-direction: column;
-            }
-        }
-        .cto-btn{
-            width:100%;
-            display:flex;
-            gap:10px;
-            button{
-                padding:10px;
-                border-radius:5px;
-                border:none;
-                color:var(--light);
-                background: var(--primary);
-                display:flex;
-                gap:10px;
-                font-family: var(--second-family);
-                font-weight: 500;
-                color: var(--background);
-            }
-        }
-        a {
-            text-decoration: none;
-            font-family: var(--second-family);
-            font-weight: 500;
-            font-size: 14px;
-            text-transform: capitalize;
-            color: var(--text);
-            /* margin-right: 10px; */
-        }
-    }
+    
 }

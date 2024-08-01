@@ -3,62 +3,59 @@ header.appendChild(
     Object.assign(
         document.createElement('nav'),
         {
-            innerHTML: `
-            <div class="container d-flex">
-                <div class="logo" id="logo"></div>
-                <div class="menu" id="menu"></div>
-            </div>
-            <div class="rspn-menu" id="rspnMenu"></div>
+            // create innerhtml
+            innerHTML:`
+               <div class="container d-flex">
+                  <img id="img">
+                  <input type="checkbox" id="check">
+                  <label for="check" id="toggleBtn">
+                    <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0.0727539" width="15" height="3" rx="1.5" fill="#303642" />
+                    <rect y="8.07275" width="11" height="3" rx="1.5" fill="#303642" />
+                    </svg>
+                  </label>
+                  <div class="menu" id="menu"></div>
+               </div>
             `,
-            function: addEventListener('load', () => {
-                fetch("./content.json").then(res => res.json()).then(data => {
+            function:addEventListener('load',()=>{
+                fetch('./content.json').then(res=>res.json()).then(data=>{
                     const item = data.header;
-                    logo.innerHTML = `
-                    <img src=${item.logo}>
-                    <div class="toggle-btn" id="toggleBtn" onclick="toggle(this)">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                    `
-                    // menu
+                    img.src= item.logo;
                     menu.innerHTML += `
                     <div class="cto-btn">
-                        <button>Book For Home Sampling</button>
-                        <button><img src=${data.phone}> 080 457 74444</button>
+                      <button>Book For Home Sampling</button>
+                      <button><img src=${data.phone}>080 457 74444</button>
                     </div>
                     <div class="menu-list">
-                    ${item.menu.map(elmnt => {
-                        return `<a href="">${elmnt}</a>`
-                    }).join("")
-                        }
+                    ${
+                        item.menu.map(elmnt=>{
+                            return `<a href="">${elmnt}</a>`
+                        }).join("")
+                    }
                     </div>
                     `
-                    // rspn menu
-                    rspnMenu.innerHTML += `
-                    <div class="cto-btn">
-                        <button>Book For Home Sampling</button>
-                        <button><img src=${data.phone}> 080 457 74444</button>
-                    </div>
-                    <div class="menu-list">
-                    ${item.menu.map(elmnt => {
-                        return `<a href="">${elmnt}</a>`
-                    }).join("")
-                        }
-                    </div>
-                    `
-                    // toggle menu
-                    document.getElementById("rspnMenu").style.display = "none";
-                    toggleBtn.addEventListener('click', () => {
-                        var x = document.getElementById("rspnMenu");
-                        // x.classList.remove('rspn-menu')
-                        if (x.style.display === "block") {
-                            x.style.display = "none";
-                        } else {
-                            x.style.display = "block";
-                        }
-                    })
                 })
+                // toggle menu
+                toggleBtn.addEventListener('click',()=>{
+                    if(!document.getElementById('check').checked){
+                        toggleBtn.innerHTML = `
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.667114" y="11.0754" width="15" height="3" rx="1.5" transform="rotate(-47.6164 0.667114 11.0754)" fill="#303642" />
+                        <rect x="2.02002" y="0.076416" width="16.1214" height="3" rx="1.5" transform="rotate(42.3269 2.02002 0.076416)" fill="#303642" />
+                        </svg>
+                        `
+                    }
+                    else{
+                        toggleBtn.innerHTML = `
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.0727539" width="15" height="3" rx="1.5" fill="#303642" />
+                        <rect y="8.07275" width="11" height="3" rx="1.5" fill="#303642" />
+                        </svg>
+                        `
+                    }
+                })
+                
+                
             })
         }
     )

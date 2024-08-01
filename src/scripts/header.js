@@ -22,15 +22,17 @@ header.appendChild(
                     const item = data.header;
                     img.src = item.logo;
                     menu.innerHTML += `
-                    <div class="cto-btn">
-                      <button>Book For Home Sampling</button>
-                      <button><img src=${data.phone}>080 457 74444</button>
-                    </div>
-                    <div class="menu-list">
-                    ${item.menu.map(elmnt => {
-                        return `<a href="">${elmnt}</a>`
-                    }).join("")
-                        }
+                    <div class="menu-container">
+                        <div class="cto-btn">
+                        <button>Book For Home Sampling</button>
+                        <button><img src=${data.phone}>080 457 74444</button>
+                        </div>
+                        <div class="menu-list">
+                        ${item.menu.map(elmnt => {
+                            return `<a href="">${elmnt}</a>`
+                        }).join("")
+                            }
+                        </div>
                     </div>
                     `
                 })

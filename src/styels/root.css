@@ -31,3 +31,11 @@ body{
 .d-flex{
     display:flex;
 }
+.d-col{
+    display:flex;
+    flex-direction: column;
+}
+.d-row{
+    display:flex;
+    flex-direction: row;
+}

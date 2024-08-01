@@ -2,7 +2,82 @@
     width:100%;
     height:auto;
     section:nth-child(1){
-        background:green;
-        height:100vh;
+        background: linear-gradient(90deg, #303642 13.14%, #6e9760 100%);
+        height:auto;
+        width:100%;
+        position: relative;
+        
+        .slider-btn{
+            margin-top: 20px;
+            position: absolute;
+            bottom:2pc;
+            left:4pc;
+            button{
+                background: transparent;
+                border:none;
+                cursor:pointer;
+            }
+            /* */
+            @media(max-width:600px){
+                left:10px;
+            }
+        }
+        .banner-container{
+            width:100%;
+            overflow:hidden;
+            .slider{
+                width:100%;
+                flex-shrink: 0;
+                display:flex;
+                align-items: center;
+                @media(max-width:600px){
+                    flex-direction: column-reverse;
+                }
+
+                .section-01-left{
+                    width:100%;
+                    margin-left: 5vw;
+                    /* align-items: start; */
+                    @media(max-width:600px){
+                        margin: auto;
+                         height:100%;
+                    }
+                    .title-container{
+                        padding:10px;
+                        height:100%;
+                    }
+                    .title{
+                        font-family: var(--second-family);
+                        font-weight: 700;
+                        font-size: 70px;
+                        line-height: 114%;
+                        letter-spacing: 0.01em;
+                        color: var(--background);
+                    }
+                    .customize{
+                        color: var(--secondary);
+                    }
+                    
+                }
+                .section-01-right{
+                    /* width:100%; */
+                    .img{
+                        width:600px;
+                        @media(max-width:600px){
+                            display:none;
+                        }
+                        /* height:100%; */
+                    }
+                    .rspn-img{
+                        width:100%;
+                        display: none;
+                        @media(max-width:600px){
+                            display:block;
+                        }
+                    }
+                }
+            }
+
+        }
     }
 }

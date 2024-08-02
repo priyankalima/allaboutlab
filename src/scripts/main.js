@@ -217,8 +217,10 @@ main.append(
                 fetch('./content.json').then(res=>res.json()).then(data=>{
                     const item = data.main.teamDetail;
                     section04Left.innerHTML = `
-                    <span class="title">${item.title}</span>
-                    <span class="para">${item.para}</span>
+                    <div class="content">
+                        <span class="title">${item.title}</span>
+                        <span class="para">${item.para}</span>
+                    </div>
                     <div class="lists d-col">
                     ${
                         item.list.map(item=>{

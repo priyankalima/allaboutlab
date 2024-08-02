@@ -248,22 +248,81 @@
     /* section three styling */
     section:nth-child(3){
        width:100%;
-       height:auto;
+       /* height:100vh; */
        background: var(--primary);
        position: relative;
+       display:flex;
+       align-items: center;
 
        .back-img{
         width:100%;
         background: var(--primary);
         position: absolute;
+        top:0;
         /* background-color: green; */
         display:flex;
-        padding:60px 0;
+        padding:10px 0;
         justify-content: center;
        }
-       .content{
+       .container{
         position: relative;
         z-index: 111;
+        display:flex;
+        flex-direction: column;
+        /* align-items: center; */
+        height:100%;
+        padding:60px 0;
        }
+       .section-03-top{
+        display:flex;
+        flex-direction: column;
+        .title{
+            font-family: var(--second-family);
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 111%;
+            color: var(--background);
+        }
+        .para{
+            font-family: var(--second-family);
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: capitalize;
+            color: var(--background);
+        }
+       }
+       .section-03-bottom{
+        margin-top: 30px;
+        display:flex;
+        gap:20px;
+        width:100%;
+        overflow: scroll;
+        .card{
+            border-radius: 20px;
+            padding: 50px 55px;
+            width: 213px;
+            height: auto;
+            background: #353d4b;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            gap:10px;
+
+            .title{
+                font-family: var(--second-family);
+                font-weight: 600;
+                font-size: 18px;
+                text-align: center;
+                color: var(--background);
+            }
+        }
+       }
+       .section-03-bottom::-webkit-scrollbar{
+        display:none;
+       }
+    }
+    section:nth-child(4){
+        width:100%;
+        height:100vh;
     }
 }

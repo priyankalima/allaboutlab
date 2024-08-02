@@ -177,13 +177,25 @@ main.append(
             </svg>
             </div>
             <div class="container">
-                <div class="content">
-                    
+                <div class="section-03-top" id="section03Top">
+                     <span class="title">Test By Health Risk</span>
+                     <span class="para">Choose from our wide range of Packages and Health Check-ups</span>
                 </div>
+                <div class="section-03-bottom" id="section03Bottom"></div>
             </div>
             `,
             function:addEventListener('load',()=>{
-                
+                fetch('./content.json').then(res=>res.json()).then(data=>{
+                    const item = data.main.healthRisk;
+                    item.forEach(item=>{
+                        section03Bottom.innerHTML += `
+                        <div class="card">
+                            <img src=${item.img}>
+                            <span class="title">${item.title}</span>
+                        </div>
+                        `
+                    })
+                })
             })
         }
     ),

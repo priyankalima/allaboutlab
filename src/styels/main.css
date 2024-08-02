@@ -590,7 +590,7 @@
                 border: 1px solid #000;
                 border-radius: 20px;
                 padding: 20px 20px;
-                width: 350px;
+                width: 300px;
                 height: auto;
                 flex-shrink: 0;
                 display:flex;
@@ -629,19 +629,19 @@
                 }
             }
             .tesimonial-card:first-child{
-                left:0;
-                top:0;
+                left:2vw;
+                top:2vh;
                 @media(max-width:600px){
                 margin-left: 5.5vw;
                 }
             }
             .tesimonial-card:nth-child(2){
-                right:0;
+                left:25vw;
                 top:20vh;
             }
             .tesimonial-card:last-child{
-                left:0;
-                bottom:0;
+                left:2vw;
+                bottom:2vh;
                 @media(max-width:600px){
                     margin-right: 5.5vw;
                 }

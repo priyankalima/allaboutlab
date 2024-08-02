@@ -207,9 +207,47 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            innerHTML:``,
+            innerHTML:`
+            <div class="container ">
+                  <div class="section-04-left d-col" id="section04Left"></div>
+                  <div class="section-04-right" id="section04Right"></div>
+            </div>
+            `,
             function:addEventListener('load',()=>{
+                fetch('./content.json').then(res=>res.json()).then(data=>{
+                    const item = data.main.teamDetail;
+                    section04Left.innerHTML = `
+                    <span class="title">${item.title}</span>
+                    <span class="para">${item.para}</span>
+                    <div class="lists d-col">
+                    ${
+                        item.list.map(item=>{
+                            return `
+                            <div class="d-flex">
+                                <img src=${item.icon}>
+                                <span class="name">${item.name}</span>
+                            </div>
+                            `
+                        }).join("")
+                    }
+                    </div>
+                    `
+                    section04Right.innerHTML = `
+                    <div class="profile-detail d-flex">
+                        ${
+                            item.team.map(item=>{
+                                return `
+                                <div class="profile-card">
+                                    <img src=${item.img}>
+                                    <span class="name">${item.name}</span>
+                                    <span class="proffesion">${item.proffesion}</span>
+                                </div>`
+                            }).join("")
+                        }
+                    </div>
+                    `
                 
+                })
             })
         }
     ),

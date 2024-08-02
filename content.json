@@ -31,12 +31,12 @@
         "packages": [
             {
                 "img": "./src/assets/packages-images/img-1.svg",
-                "title": "Essential Healthcare Package",
+                "title": "Essential Healthcare Package for Family",
                 "price": "999"
             },
             {
                 "img": "./src/assets/packages-images/img-2.svg",
-                "title": "Advance Healthcare Package",
+                "title": "Advance Healthcare Package for Old-age",
                 "price": "749"
             },
             {

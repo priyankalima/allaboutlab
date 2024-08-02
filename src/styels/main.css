@@ -96,7 +96,147 @@
     /* section two styling */
     section:nth-child(2){
         width:100%;
-        height:100vh;
+        height:auto;
+        padding:60px 0;
         background:var(--background);
+        align-items: center;
+        @media(max-width:600px){
+            flex-direction: column;
+        }
+
+        .section-02-left {
+            overflow:scroll;
+            /* background:green; */
+            width:100%;
+            gap:20px;
+            display: flex;
+
+            .card{
+                width:300px;
+                background:#fff;
+                flex-shrink: 0;
+                border-radius: 10px;
+
+                img{
+                    width:100%;
+                    height:250px;
+                    object-fit: cover;
+                    border-radius: 10px 10px 0 0;
+                }
+                .content{
+                    padding:10px;
+                    display:flex;
+                    gap:10px;
+                    flex-direction: column;
+                    .title{
+                        font-family: var(--font-family);
+                        font-weight: 500;
+                        font-size: 16px;
+                        color: var(--text);
+                    }
+                    .price{
+                        font-family: var(--font-family);
+                        font-weight: 700;
+                        font-size: 15px;
+                        color: var(--text);
+                    }
+                    .custome{
+                        font-family: var(--font-family);
+                        font-weight: 600;
+                        font-size: 15px;
+                        color: #d9d9d9;
+                        text-decoration: line-through;
+                        margin-left: 10px;
+                    }
+                }
+                .cto-btn{
+                    padding:10px;
+                    display:flex;
+                    gap:10px;
+                    button{
+                        width:100%;
+                        padding: 12px 20px;
+                        cursor:pointer;
+                    }
+                    button:first-child{
+                        border-radius: 10px;
+                        font-family: var(--font-family);
+                        font-weight: 600;
+                        font-size: 14px;
+                        color: var(--light);
+                        background: var(--primary);
+                        border:none;
+                    }
+                    button:last-child{
+                        border: 1px solid var(--primary);
+                        border-radius: 10px;
+                        background:transparent;
+                        font-family: var(--font-family);
+                        font-weight: 600;
+                        font-size: 15px;
+                        color: #111;
+                    }
+                }
+            }
+            .card:first-child{
+                margin-left: 5vw;
+            }
+            .card:last-child{
+                margin-right: 2vw;
+                @media(max-width:600px){
+                    margin-right: 5vw;
+                }
+            }
+        }
+        .section-02-left::-webkit-scrollbar{
+            display: none;
+        }
+        .section-02-right{
+            width:60%;
+            height:auto;
+            .container{
+                margin-top:30px;
+                gap:20px;
+            }
+            .content{
+                display:flex;
+                flex-direction: column;
+                .title{
+                    font-family: var(--second-family);
+                    font-weight: 700;
+                    font-size: 45px;
+                    line-height: 111%;
+                    color: var(--text);
+                }
+                .para{
+                    font-family: var(--second-family);
+                    font-weight: 500;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    color: rgba(29, 39, 59, 0.6);
+                }
+            }
+            .slider-control{
+                display:flex;
+                gap:5px;
+                button{
+                    /* padding:10px; */
+                    cursor:pointer;
+                    background:transparent;
+                    border:none;
+                }
+                button:last-child{
+                    border: 1px solid #acafae;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 140px;
+                    height: 41px;
+                }
+            }
+            @media(max-width:600px){
+                width:100%;
+                height:auto;
+            }
+        }
     }
 }

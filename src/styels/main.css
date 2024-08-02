@@ -245,4 +245,25 @@
             }
         }
     }
+    /* section three styling */
+    section:nth-child(3){
+       width:100%;
+       height:auto;
+       background: var(--primary);
+       position: relative;
+
+       .back-img{
+        width:100%;
+        background: var(--primary);
+        position: absolute;
+        /* background-color: green; */
+        display:flex;
+        padding:60px 0;
+        justify-content: center;
+       }
+       .content{
+        position: relative;
+        z-index: 111;
+       }
+    }
 }

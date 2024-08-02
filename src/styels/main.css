@@ -5,7 +5,10 @@
         background: linear-gradient(90deg, #303642 13.14%, #6e9760 100%);
         height:auto;
         width:100%;
-        padding-bottom: 20px;
+        
+        @media(max-width:600px) {
+            padding-bottom: 20px;
+        }
         position: relative;
         
         .slider-btn{
@@ -81,7 +84,6 @@
                     .rspn-img{
                         width:100%;
                         display: none;
-                        object-fit: cover;
                         @media(max-width:600px){
                             display:block;
                         }
@@ -90,5 +92,11 @@
             }
 
         }
+    }
+    /* section two styling */
+    section:nth-child(2){
+        width:100%;
+        height:100vh;
+        background:var(--background);
     }
 }

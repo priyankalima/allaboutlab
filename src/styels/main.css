@@ -350,6 +350,7 @@
             overflow: scroll;
 
             .card {
+                cursor: pointer;
                 border-radius: 20px;
                 padding: 50px 55px;
                 width: 213px;
@@ -369,7 +370,7 @@
                 }
             }
             .card:first-child{
-                margin-left: 5vw;
+                margin-left: 5.5vw;
             }
             .card:last-child{
                 margin-right: 5.5vw;

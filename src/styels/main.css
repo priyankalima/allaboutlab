@@ -224,6 +224,9 @@
                     cursor:pointer;
                     background:transparent;
                     border:none;
+                    @media(max-width:600px){
+                        display:none;
+                    }
                 }
                 button:last-child{
                     border: 1px solid #acafae;
@@ -231,6 +234,9 @@
                     padding: 10px;
                     width: 140px;
                     height: 41px;
+                    @media(max-width:600px){
+                        display:block !important;
+                    }
                 }
             }
             @media(max-width:600px){

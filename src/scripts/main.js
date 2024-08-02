@@ -257,9 +257,37 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            innerHTML:``,
+            innerHTML:`
+            <div class="container d-flex">
+                <div class="section-05-left" id="section05Left"></div>
+                <div class="section-05-right" id="section05Right"></div>
+            </div>
+            `,
             function:addEventListener('load',()=>{
-                
+                section05Left.innerHTML = `
+                <div class="d-col">
+                      <span class="title">What Our Customer Say?</span>
+                      <span class="para">We're satisfying our customers every day</span>
+                </div>
+                `
+                fetch('./content.json').then(res=>res.json()).then(data=>{
+                    const item = data.main.testimonial;
+                    section05Right.innerHTML= `
+                    <div class="testimonial-container d-flex">
+                        ${
+                            item.map(item=>{
+                                return `
+                                <div class="tesimonial-card">
+                                   <img src=${item.img}>
+                                   <span class="msg">${item.msg}</span>
+                                   <span class="name">${item.name}</span>
+                                   <span class="proffesion">${item.proffesion}</span>
+                                </div>`
+                            }).join("")
+                        }
+                    </div>
+                    `
+                })
             })
         }
     ),

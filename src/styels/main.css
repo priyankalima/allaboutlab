@@ -8,10 +8,15 @@
         position: relative;
         
         .slider-btn{
-            margin-top: 20px;
+            margin-top: 25px;
             position: absolute;
-            bottom:2pc;
+            bottom:1pc;
             left:4pc;
+            @media(max-width:600px){
+                padding:10px  20px;
+
+                position:initial;
+            }
             button{
                 background: transparent;
                 border:none;
@@ -36,14 +41,14 @@
 
                 .section-01-left{
                     width:100%;
-                    margin-left: 5vw;
+                    margin-left: 3.5vw;
                     /* align-items: start; */
                     @media(max-width:600px){
                         margin: auto;
                          height:100%;
                     }
                     .title-container{
-                        padding:10px;
+                        padding:10px 20px;
                         height:100%;
                     }
                     .title{
@@ -53,6 +58,9 @@
                         line-height: 114%;
                         letter-spacing: 0.01em;
                         color: var(--background);
+                        @media(max-width:600px){
+                            font-size: 50px;
+                        }
                     }
                     .customize{
                         color: var(--secondary);
@@ -60,9 +68,9 @@
                     
                 }
                 .section-01-right{
-                    /* width:100%; */
+                    width:100%;
                     .img{
-                        width:600px;
+                        width:100%;
                         @media(max-width:600px){
                             display:none;
                         }
@@ -71,6 +79,7 @@
                     .rspn-img{
                         width:100%;
                         display: none;
+                        object-fit: cover;
                         @media(max-width:600px){
                             display:block;
                         }

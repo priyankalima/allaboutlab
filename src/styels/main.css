@@ -651,4 +651,39 @@
             }
         }
     }
+    /* section six styling */
+    section:nth-child(6){
+        width:100%;
+        height:auto;
+        background:var(--primary);
+        padding:60px 0;
+
+        .counter-container{
+            display:flex;
+            gap:100px;
+            justify-content: center;
+            @media(max-width:600px){
+                gap:30px;
+                flex-direction: column;
+            }
+
+            .counter-content{
+                align-items: center;
+                gap:20px;
+                .counter{
+                    font-family: var(--font-family);
+                    font-weight: 800;
+                    font-size: 30px;
+                    color: var(--light);
+                }
+                .text{
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    font-size: 16px;
+                    text-align: center;
+                    color: var(--light);
+                }
+            }
+        }
+    }
 }

@@ -10,6 +10,4 @@ file.forEach(item=>{
     document.body.appendChild(script);
 })
 
-function toggle(x){
-    x.classList.toggle("change");
-}
+

@@ -3,7 +3,7 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            innerHTML:`
+            innerHTML: `
             <div class="d-flex banner-container" id="bannerContainer"></div>
             <div class="slider-btn" id="sliderControl">
             <button class="leftBtn">
@@ -20,11 +20,11 @@ main.append(
             </button>
             </div>
             `,
-            function:addEventListener('load',()=>{
-                    fetch('./content.json').then(res=>res.json()).then(data=>{
-                        const item = data.main;
-                        item.banner.forEach(item=>{
-                            bannerContainer.innerHTML += `
+            function: addEventListener('load', () => {
+                fetch('./content.json').then(res => res.json()).then(data => {
+                    const item = data.main;
+                    item.banner.forEach(item => {
+                        bannerContainer.innerHTML += `
                             <div class="slider" id="slider">
                                 <div class="section-01-left" id="section01Left">
                                     <div class="title-container">
@@ -37,44 +37,44 @@ main.append(
                                 </div>
                             </div>
                             `
-                        })
-                        const slider = document.getElementById('slider');
-                        const carousel = document.getElementById('bannerContainer');
-                        // console.log(slider.offsetWidth)
-                        const width = slider.offsetWidth;
-                        const maxWidth = carousel.scrollWidth;
-                        const scrollLeft = maxWidth - width;
-                        // const result = scrollLeft - 1;
-                        // console.log(maxWidth- slider.clientWidth)
-                        // console.log( maxWidth-width)
-                        // console.log(carousel.scrollLeft)
-                        document.querySelector('.leftBtn').addEventListener('click',()=>{
-                            carousel.scrollBy(-width,0)
-                            console.log(carousel.scrollLeft)
-                            if(carousel.scrollLeft <= 0) {
-                                document.querySelector('.left-rect').style.fill = "transparent";
-                                document.querySelector('.right-rect').style.fill = "#8EC15B";
-                                 document.querySelector('.right-rect').style.stroke = "#8EC15B";
-                                document.querySelector('.right-path').style.fill = "#ffffff";
-                                document.querySelector('.left-path').style.fill = "#ACAFAE";
-                            }
-                            
-                        })
-                        document.querySelector('.rightBtn').addEventListener('click',()=>{
-                            carousel.scrollBy(width,0)
-                            // console.log(maxWidth)
-                            console.log(carousel.scrollLeft)
-                            if(carousel.scrollLeft >= (scrollLeft-1)) {
-                                document.querySelector('.right-rect').style.fill = "transparent";
-                                document.querySelector('.left-rect').style.fill = "#8EC15B";
-                                document.querySelector('.left-rect').style.stroke = "#8EC15B";
-                                document.querySelector('.right-path').style.fill = "#ACAFAE";
-                                document.querySelector('.left-path').style.fill = "#fff";
-                            }
-                           
-                        })
-                        
                     })
+                    const slider = document.getElementById('slider');
+                    const carousel = document.getElementById('bannerContainer');
+                    // console.log(slider.offsetWidth)
+                    const width = slider.offsetWidth;
+                    const maxWidth = carousel.scrollWidth;
+                    const scrollLeft = maxWidth - width;
+                    // const result = scrollLeft - 1;
+                    // console.log(maxWidth- slider.clientWidth)
+                    // console.log( maxWidth-width)
+                    // console.log(carousel.scrollLeft)
+                    document.querySelector('.leftBtn').addEventListener('click', () => {
+                        carousel.scrollBy(-width, 0)
+                        console.log(carousel.scrollLeft)
+                        if (carousel.scrollLeft <= 0) {
+                            document.querySelector('.left-rect').style.fill = "transparent";
+                            document.querySelector('.right-rect').style.fill = "#8EC15B";
+                            document.querySelector('.right-rect').style.stroke = "#8EC15B";
+                            document.querySelector('.right-path').style.fill = "#ffffff";
+                            document.querySelector('.left-path').style.fill = "#ACAFAE";
+                        }
+
+                    })
+                    document.querySelector('.rightBtn').addEventListener('click', () => {
+                        carousel.scrollBy(width, 0)
+                        // console.log(maxWidth)
+                        console.log(carousel.scrollLeft)
+                        if (carousel.scrollLeft >= (scrollLeft - 1)) {
+                            document.querySelector('.right-rect').style.fill = "transparent";
+                            document.querySelector('.left-rect').style.fill = "#8EC15B";
+                            document.querySelector('.left-rect').style.stroke = "#8EC15B";
+                            document.querySelector('.right-path').style.fill = "#ACAFAE";
+                            document.querySelector('.left-path').style.fill = "#fff";
+                        }
+
+                    })
+
+                })
             })
         }
     ),
@@ -82,15 +82,15 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            className:"d-flex",
-            innerHTML:`
+            className: "d-flex",
+            innerHTML: `
             <div class="section-02-left" id="section02Left"></div>
             <div class="section-02-right" id="section02Right"></div>
             `,
-            function:addEventListener('load',()=>{
-                fetch('./content.json').then(res=>res.json()).then(data=>{
+            function: addEventListener('load', () => {
+                fetch('./content.json').then(res => res.json()).then(data => {
                     const item = data.main.packages;
-                    item.forEach(item=>{
+                    item.forEach(item => {
                         section02Left.innerHTML += `
                         <div class="card d-col" id="card">
                              <img src=${item.img}>
@@ -135,34 +135,34 @@ main.append(
                     const maxWidth = slider.scrollWidth;
                     const width = element.offsetWidth;
                     const scrollLeft = maxWidth - width;
-                    document.querySelector('.left-btn-02').addEventListener('click',()=>{
+                    document.querySelector('.left-btn-02').addEventListener('click', () => {
                         // alert('hello')
-                         slider.scrollBy(-width,0);
-                         if(slider.scrollLeft <= 0){
-                               document.querySelector('.left-rect-02').style.fill = "transparent";
-                               document.querySelector('.right-rect-02').style.fill = "#8EC15B";
-                               document.querySelector('.right-path-02').style.fill = "#ffffff";
-                               document.querySelector('.left-path-02').style.fill = "#ACAFAE";
+                        slider.scrollBy(-width, 0);
+                        if (slider.scrollLeft <= 0) {
+                            document.querySelector('.left-rect-02').style.fill = "transparent";
+                            document.querySelector('.right-rect-02').style.fill = "#8EC15B";
+                            document.querySelector('.right-path-02').style.fill = "#ffffff";
+                            document.querySelector('.left-path-02').style.fill = "#ACAFAE";
                             //    document.querySelector('.left-rect').style.fill = "transparent";
                             //    document.querySelector('.right-rect').style.fill = "#8EC15B";
-                                // document.querySelector('.right-rect').style.stroke = "#8EC15B";
+                            // document.querySelector('.right-rect').style.stroke = "#8EC15B";
                             //    document.querySelector('.right-path').style.fill = "#ffffff";
                             //    document.querySelector('.left-path').style.fill = "#ACAFAE";
                             // alert('helo')
-                         }
-                     })
-                     document.querySelector('.right-btn-02').addEventListener('click',()=>{
+                        }
+                    })
+                    document.querySelector('.right-btn-02').addEventListener('click', () => {
                         // alert('hello')
-                        slider.scrollBy(width,0)
-                        if(slider.scrollLeft > (scrollLeft-543)){
+                        slider.scrollBy(width, 0)
+                        if (slider.scrollLeft > (scrollLeft - 543)) {
                             document.querySelector('.left-rect-02').style.fill = "#8EC15B";
                             document.querySelector('.right-rect-02').style.fill = "transparent";
                             document.querySelector('.left-path-02').style.fill = "#ffffff";
                             document.querySelector('.right-path-02').style.fill = "#ACAFAE";
-                      }
-                     })
+                        }
+                    })
                 })
-                 
+
             })
         }
     ),
@@ -170,7 +170,7 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            innerHTML:`
+            innerHTML: `
             <div class="back-img">
             <svg width="300" height="481" viewBox="0 0 300 481" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M287.535 400.774L217.729 259.825C210.873 246.03 205.263 222.463 205.263 207.447C205.263 192.43 215.921 180.144 228.947 180.144C241.974 180.144 252.632 170.912 252.632 159.667C252.632 148.423 238.421 139.19 221.053 139.19H78.9474C61.5789 139.19 47.3684 148.387 47.3684 159.667C47.3684 170.947 58.0263 180.144 71.0526 180.144C84.0789 180.144 94.7369 192.43 94.7369 207.447C94.7369 222.463 89.1274 246.03 82.2715 259.842L12.4654 400.81C5.60943 414.605 0 432.064 0 439.555C0 447.045 7.10527 459.367 15.7895 466.857C24.4737 474.347 45.7895 480.508 63.1579 480.508H236.842C254.19 480.508 275.485 474.401 284.211 466.857C292.936 459.313 300 447.063 300 439.555C300 432.046 294.391 414.587 287.535 400.81V400.774ZM172.5 98.7752C172.5 103.934 174.871 108.882 179.09 112.531C183.31 116.179 189.033 118.228 195 118.228C200.967 118.228 206.69 116.179 210.91 112.531C215.13 108.882 217.5 103.934 217.5 98.7752C217.497 93.6159 215.124 88.6689 210.903 85.0224C206.681 81.3759 200.957 79.3287 194.99 79.3311C189.022 79.3335 183.3 81.3853 179.083 85.0351C174.865 88.685 172.497 93.6159 172.5 98.7752ZM111.939 101.775C114.694 101.775 117.336 100.829 119.284 99.1444C121.232 97.4601 122.327 95.1757 122.327 92.7938C122.327 90.4118 121.232 88.1274 119.284 86.4432C117.336 84.7589 114.694 83.8127 111.939 83.8127C109.184 83.8127 106.542 84.7589 104.594 86.4432C102.646 88.1274 101.551 90.4118 101.551 92.7938C101.551 95.1757 102.646 97.4601 104.594 99.1444C106.542 100.829 109.184 101.775 111.939 101.775ZM151.766 56.8693C156.221 57.0606 160.675 56.4668 164.857 55.1239C169.038 53.781 172.861 51.7171 176.091 49.0576C179.322 46.3981 181.893 43.1985 183.649 39.6532C185.406 36.1079 186.31 32.2909 186.307 28.4342C186.304 24.5774 185.394 20.7615 183.633 17.2181C181.872 13.6747 179.296 10.4779 176.061 7.82195C172.827 5.16597 169.001 3.10625 164.818 1.76794C160.634 0.429628 156.179 -0.159337 151.724 0.0368295C143.363 0.486944 135.515 3.67711 129.78 8.957C124.046 14.2369 120.856 21.209 120.861 28.452C120.866 35.695 124.066 42.6636 129.809 47.9372C135.551 53.2108 143.404 56.3924 151.766 56.8334V56.8693Z" fill="#353D4B" fill-opacity="0.5" />
@@ -184,10 +184,10 @@ main.append(
                 <div class="section-03-bottom" id="section03Bottom"></div>
             </div>
             `,
-            function:addEventListener('load',()=>{
-                fetch('./content.json').then(res=>res.json()).then(data=>{
+            function: addEventListener('load', () => {
+                fetch('./content.json').then(res => res.json()).then(data => {
                     const item = data.main.healthRisk;
-                    item.forEach(item=>{
+                    item.forEach(item => {
                         section03Bottom.innerHTML += `
                         <div class="card">
                             <img src=${item.img}>
@@ -207,14 +207,14 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            innerHTML:`
+            innerHTML: `
             <div class="container ">
                   <div class="section-04-left d-col" id="section04Left"></div>
                   <div class="section-04-right" id="section04Right"></div>
             </div>
             `,
-            function:addEventListener('load',()=>{
-                fetch('./content.json').then(res=>res.json()).then(data=>{
+            function: addEventListener('load', () => {
+                fetch('./content.json').then(res => res.json()).then(data => {
                     const item = data.main.teamDetail;
                     section04Left.innerHTML = `
                     <div class="content">
@@ -222,33 +222,31 @@ main.append(
                         <span class="para">${item.para}</span>
                     </div>
                     <div class="lists d-col">
-                    ${
-                        item.list.map(item=>{
-                            return `
+                    ${item.list.map(item => {
+                        return `
                             <div class="d-flex">
                                 <img src=${item.icon}>
                                 <span class="name">${item.name}</span>
                             </div>
                             `
-                        }).join("")
-                    }
+                    }).join("")
+                        }
                     </div>
                     `
                     section04Right.innerHTML = `
                     <div class="profile-detail d-flex">
-                        ${
-                            item.team.map(item=>{
-                                return `
+                        ${item.team.map(item => {
+                        return `
                                 <div class="profile-card">
                                     <img src=${item.img}>
                                     <span class="name">${item.name}</span>
                                     <span class="proffesion">${item.proffesion}</span>
                                 </div>`
-                            }).join("")
+                    }).join("")
                         }
                     </div>
                     `
-                
+
                 })
             })
         }
@@ -257,33 +255,32 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            innerHTML:`
+            innerHTML: `
             <div class="container d-flex">
                 <div class="section-05-left" id="section05Left"></div>
                 <div class="section-05-right" id="section05Right"></div>
             </div>
             `,
-            function:addEventListener('load',()=>{
+            function: addEventListener('load', () => {
                 section05Left.innerHTML = `
                 <div class="d-col">
                       <span class="title">What Our Customer Say?</span>
                       <span class="para">We're satisfying our customers every day</span>
                 </div>
                 `
-                fetch('./content.json').then(res=>res.json()).then(data=>{
+                fetch('./content.json').then(res => res.json()).then(data => {
                     const item = data.main.testimonial;
-                    section05Right.innerHTML= `
+                    section05Right.innerHTML = `
                     <div class="testimonial-container d-flex">
-                        ${
-                            item.map(item=>{
-                                return `
+                        ${item.map(item => {
+                        return `
                                 <div class="tesimonial-card">
                                    <img src=${item.img}>
                                    <span class="msg">${item.msg}</span>
                                    <span class="name">${item.name}</span>
                                    <span class="proffesion">${item.proffesion}</span>
                                 </div>`
-                            }).join("")
+                    }).join("")
                         }
                     </div>
                     `
@@ -295,9 +292,49 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            innerHTML:``,
-            function:addEventListener('load',()=>{
-                
+            innerHTML: `
+            <div class="container">
+                <div class="counter-container" id="counterContainer">
+            </div>
+            `,
+            function: addEventListener('load', () => {
+                fetch('./content.json').then(res => res.json()).then(data => {
+                    const item = data.main.counts;
+                    item.forEach(e => {
+                        counterContainer.innerHTML += `
+                           <div class="counter-content d-col">
+                                <span class="counter" data-count=${e.count}>0</span>
+                                <span class="text">${e.text}</span>
+                            </div>
+                         `
+                    })
+                    let count, container;
+                    count = document.querySelectorAll('.counter');
+                    container = document.getElementById('counterContainer')
+                    console.log(count)
+                    // console.log(container)
+                    let counting = false;
+                    window.onscroll = () => {
+                        if (window.screenX = container.offsetTop) {
+                            if(!counting){
+                                count.forEach((e) => {
+                                    let start = 0;
+                                    console.log(e.dataset.count)
+                                    let end = e.dataset.count
+                                    let nums = setInterval(() => {
+                                        start++;
+                                        e.textContent = start + '+';
+                                        if (start == end) {
+                                            clearInterval(nums);
+                                        }
+                                    }, 1500 / end)
+                                })
+                            }
+                            counting = true;
+                        }
+                    }
+                })
+
             })
         }
     ),
@@ -305,9 +342,9 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            innerHTML:``,
-            function:addEventListener('load',()=>{
-                
+            innerHTML: ``,
+            function: addEventListener('load', () => {
+
             })
         }
     ),
@@ -315,9 +352,9 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            innerHTML:``,
-            function:addEventListener('load',()=>{
-                
+            innerHTML: ``,
+            function: addEventListener('load', () => {
+
             })
         }
     ),
@@ -325,9 +362,9 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            innerHTML:``,
-            function:addEventListener('load',()=>{
-                
+            innerHTML: ``,
+            function: addEventListener('load', () => {
+
             })
         }
     )

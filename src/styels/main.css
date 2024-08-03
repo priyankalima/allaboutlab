@@ -590,7 +590,7 @@
                 border: 1px solid #000;
                 border-radius: 20px;
                 padding: 20px 20px;
-                width: 300px;
+                width: 250px;
                 height: auto;
                 flex-shrink: 0;
                 display:flex;
@@ -629,8 +629,8 @@
                 }
             }
             .tesimonial-card:first-child{
-                left:2vw;
-                top:2vh;
+                left:0;
+                top:0;
                 @media(max-width:600px){
                 margin-left: 5.5vw;
                 }
@@ -640,8 +640,8 @@
                 top:20vh;
             }
             .tesimonial-card:last-child{
-                left:2vw;
-                bottom:2vh;
+                left:0;
+                bottom:0;
                 @media(max-width:600px){
                     margin-right: 5.5vw;
                 }
@@ -684,6 +684,81 @@
                     color: var(--light);
                 }
             }
+        }
+    }
+    /* section seven styling */
+    section:nth-child(7){
+        width:100%;
+        height:auto;
+        padding:60px 0;
+        background: var(--background);
+
+        .section-07-top{
+            .title{
+                width:100%;
+                font-family: var(--second-family);
+                font-weight: 700;
+                font-size: 45px;
+                line-height: 111%;
+                color: #000;
+            }
+            button{
+                border: 1px solid #acafae;
+                border-radius: 10px;
+                padding: 10px;
+                width: 140px;
+                height: 41px;
+                background:transparent;
+                cursor:pointer;
+            }
+        }
+        .section-07-bottom{
+            margin-top:30px;
+            width:100%;
+            display:flex;
+            gap:20px;
+            @media(max-width:600px){
+                overflow: scroll;
+            }
+
+            .blog-card{
+                width:100%;
+                background:var(--light);
+                img{
+                    width:100%;
+                }
+                .content{
+                    padding:10px;
+                    gap:10px;
+                }
+                .date{
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: rgba(0, 0, 0, 0.5);
+                }
+                .title{
+                    font-family: var(--font-family);
+                    font-weight: 600;
+                    font-size: 15px;
+                    color: #000;
+                }
+                a{
+                    text-decoration: none;
+                    font-family: var(--font-family);
+                    font-weight: 600;
+                    font-size: 15px;
+                    color: var(--primary);
+                    cursor:pointer;
+                }
+
+                @media(max-width:600px){
+                    flex-shrink: 0;
+                }
+            }
+        }
+        .section-07-bottom::-webkit-scrollbar{
+            display:none;
         }
     }
 }

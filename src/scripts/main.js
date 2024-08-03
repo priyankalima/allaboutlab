@@ -342,9 +342,31 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            innerHTML: ``,
+            innerHTML: `
+            <div class="container">
+                 <div class="section-07-top d-flex">
+                       <span class="title">Blog</span>
+                       <button>Explore</button>
+                 </div>
+                 <div class="section-07-bottom" id="section07Bottom"></div>
+            </div>
+            `,
             function: addEventListener('load', () => {
-
+                   fetch('./content.json').then(res=>res.json()).then(data=>{
+                    const item = data.main.blog;
+                    item.forEach(e=>{
+                        section07Bottom.innerHTML += `
+                        <div class="blog-card">
+                            <img src=${e.img}>
+                            <div class="content d-col">
+                                <span class="date">${e.date}</span>
+                                <span class="title">${e.title}</span>
+                                <a href="">Know More</a>
+                            </div>
+                        </div>
+                        `
+                    })
+                   })
             })
         }
     ),

@@ -57,7 +57,7 @@ footer.append(
         document.createElement('section'),
         {
             innerHTML:`
-              <div class="container>
+              <div class="container">
                 <span class="copyright">Copyright 2023</span> 
               </div>
             `

@@ -403,9 +403,26 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            innerHTML: ``,
+            innerHTML: `
+            <div class="container">
+                <div class="brands d-flex" id="brands"></div>
+            </div>
+            `,
             function: addEventListener('load', () => {
-
+                  fetch('./content.json').then(res=>res.json()).then(data=>{
+                    const item= data.main.brands;
+                      brands.innerHTML += `
+                      ${
+                        item.map(e=>{
+                            return `
+                            <div class="brand-card">
+                                <img src=${e}>
+                            </div>
+                            `
+                        }).join("")
+                      }
+                      `
+                  })
             })
         }
     )

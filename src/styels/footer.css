@@ -1,0 +1,79 @@
+#footer{
+    width:100%;
+    height:auto;
+
+    section:nth-child(1){
+        background: #303642;
+        height: auto;
+        padding:60px 0;
+        
+        .container{
+            gap:50px;
+            @media(max-width:600px){
+                flex-direction: column;
+                gap:20px;
+            }
+            .about{
+                gap:10px;
+                span{
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 24px;
+                    text-transform: capitalize;
+                    color: var(--light);
+                }
+                .para{
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    color: var(--light);
+                }
+            }
+            .quicklink{
+                gap:10px;
+                span{
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 24px;
+                    text-transform: capitalize;
+                    color: var(--light);
+                }
+                .para{
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    color: var(--light);
+                    list-style: none;
+                }
+            }
+            .promot{
+                gap:10px;
+                span{
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 24px;
+                    text-transform: capitalize;
+                    color: var(--light);
+                }
+                .para{
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    color: var(--light);
+                    list-style: none;
+                }
+            }
+        }
+        .container > div{
+            width:100%;
+        }
+    }
+    section:nth-child(2){
+        width:100%;
+        padding:20px 0;
+        background:#232427;
+    }
+}

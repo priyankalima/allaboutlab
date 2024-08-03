@@ -43,7 +43,7 @@ nav {
             position: absolute;
             background: var(--secondary);
             left: 0;
-            top: 5.5pc;
+            top: 3.5pc;
             overflow: hidden;
             width: 0;
             height:100vh;

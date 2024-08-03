@@ -700,7 +700,7 @@
                 font-weight: 700;
                 font-size: 45px;
                 line-height: 111%;
-                color: #000;
+                color: var(--text);
             }
             button{
                 border: 1px solid #acafae;
@@ -759,6 +759,65 @@
         }
         .section-07-bottom::-webkit-scrollbar{
             display:none;
+        }
+    }
+    /* section eight styling */
+    section:nth-child(8){
+        width:100%;
+        height:auto;
+        background: #fafafa;
+        padding:60px 0;
+
+        .section-08-top{
+            .title{
+                font-family: var(--second-family);
+                font-weight: 700;
+                font-size: 45px;
+                line-height: 111%;
+                color: var(--text);
+            }
+        }
+        .section-08-bottom{
+            gap:15px;
+            margin-top:30px;
+            .faq-container{
+                box-shadow: 0 0 5px 0 rgba(207, 207, 207, 0.5);
+                background: var(--light);
+                padding:20px;
+                gap:10px;
+                border-radius: 5px;
+
+                input{
+                    display:none;
+                }
+                label{
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    color: #000;
+                    opacity: 60%;
+                    padding:15px 0;
+                    cursor:pointer;
+                }
+                .content{
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    color: #000;
+                    opacity:95%;
+                    display:none;
+                }
+                input[type="radio"]:checked + label{
+                    opacity: 100%;
+                    padding:initial;
+                }
+                input[type="radio"]:checked + label + .content{
+                    display:block;
+
+                }
+            }
         }
     }
 }

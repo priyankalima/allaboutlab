@@ -374,9 +374,28 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            innerHTML: ``,
+            innerHTML: `
+            <div class="container">
+                <div class="section-08-top" id="section08Top">
+                     <span class="title">Frequently Asked Questions</span>
+                </div>
+                <div class="section-08-bottom d-col" id="section08Bottom"></div>
+            </div>
+            `,
             function: addEventListener('load', () => {
-
+                  fetch('./content.json').then(res=>res.json()).then(data=>{
+                    const item = data.main.faq;
+                    item.forEach((e,i)=>{
+                        section08Bottom.innerHTML += `
+                        <div class="faq-container d-col">
+                            <input type="radio" name="faq" id=${'faq' + i}>
+                            <label for=${'faq' + i}>${e.title}</label>
+                            <div class="content">${e.content}</div>
+                        </div>
+                        `
+                    })
+                    document.getElementById('faq0').checked = true;
+                  })
             })
         }
     ),
